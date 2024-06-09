@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Network Security Visualization</h1>
+    <div id="network-map">
+        <div class="device router" id="core-router" data-info="Core Router with several vulnerabilities (CVE-2017-14187, CVE-2017-14189, etc.). Implement firewall rules and segment the network. 
+        \n\n**Recommendations**: 
+        \n1. Implement boundary protections and information flow controls. [AC-4, AC-19, AC-20, SC-7]
+        \n2. Enforce wireless access protection controls. [AC-18, SC-40]
+        \n3. Audit network access and interconnections. [CA-3, CA-9]
+        \n4. Establish strong portable media policies. [IA-3, MP-1, MP-2, MP-5]
+        \n5. Test for TEMPEST leakage. [PE-19, SC-37]">
+            Core-Router
+        </div>
+        <div class="device firewall" id="firewall1" data-info="FortiGate 50 firewall. Ensure latest firmware updates and monitor logs.
+        \n\n**Recommendations**: 
+        \n1. Implement boundary protections and information flow controls. [AC-4, AC-19, AC-20, SC-7]
+        \n2. Enforce wireless access protection controls. [AC-18, SC-40]
+        \n3. Audit network access and interconnections. [CA-3, CA-9]
+        \n4. Establish strong portable media policies. [IA-3, MP-1, MP-2, MP-5]
+        \n5. Test for TEMPEST leakage. [PE-19, SC-37]">
+            Firewall1
+        </div>
+        <div class="device switch" id="gateway-switch" data-info="Cisco Catalyst 2960 Switch. Regularly update and monitor for unauthorized access.
+        \n\n**Recommendations**: 
+        \n1. Implement boundary protections and information flow controls. [AC-4, AC-19, AC-20, SC-7]
+        \n2. Enforce wireless access protection controls. [AC-18, SC-40]
+        \n3. Audit network access and interconnections. [CA-3, CA-9]
+        \n4. Establish strong portable media policies. [IA-3, MP-1, MP-2, MP-5]
+        \n5. Test for TEMPEST leakage. [PE-19, SC-37]">
+            Gateway-Switch
+        </div>
+        <div class="device host" id="host1" data-info="Web server with several vulnerabilities (CVE-2017-9798, CVE-2016-8612, etc.). Ensure updates and use WAF.
+        \n\n**Recommendations**: 
+        \n1. Implement boundary protections and information flow controls. [AC-4, AC-19, AC-20, SC-7]
+        \n2. Enforce wireless access protection controls. [AC-18, SC-40]
+        \n3. Audit network access and interconnections. [CA-3, CA-9]
+        \n4. Establish strong portable media policies. [IA-3, MP-1, MP-2, MP-5]
+        \n5. Test for TEMPEST leakage. [PE-19, SC-37]">
+            example.com
+        </div>
+        <div class="device host" id="host2" data-info="WebEx Panel. Monitor and secure access.
+        \n\n**Recommendations**: 
+        \n1. Implement boundary protections and information flow controls. [AC-4, AC-19, AC-20, SC-7]
+        \n2. Enforce wireless access protection controls. [AC-18, SC-40]
+        \n3. Audit network access and interconnections. [CA-3, CA-9]
+        \n4. Establish strong portable media policies. [IA-3, MP-1, MP-2, MP-5]
+        \n5. Test for TEMPEST leakage. [PE-19, SC-37]">
+            WebEx Panel
+        </div>
+
+        <!-- Data flows -->
+        <div class="data-flow" id="flow1"></div>
+        <div class="data-flow" id="flow2"></div>
+        <div class="data-flow" id="flow3"></div>
+        <div class="data-flow" id="flow4"></div>
+    </div>
+    <div id="info-panel">
+        <h2>Device Information</h2>
+        <pre id="device-info">Click on a device to see details.</pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

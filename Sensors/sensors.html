@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Network Visualisation of Security Sensors</h1>
+    <div id="network-map-container">
+        <div id="network-map"></div>
+    </div>
+    <h2>Recommended Security Controls and Mitigations</h2>
+    <p>Where relevant, recommendations are presented with applicable security controls from the NIST 800-53 standard. Each should be evaluated with the concept of sensors in mind.</p>
+    <ol>
+        <li>Implement packet sniffers, full network PCAPs, and other automated sensors to support incident handling, maintenance, and information flow enforcement. [AC-4: Information Flow Enforcement | (14) Security Policy Filter Constraints; IR-4: Incident Handling; MA-3: Maintenance Tools]</li>
+        <li>To safeguard physical access and detect tampering, install sensors on wiring closet locks, cameras to monitor data center and server access, water sensors to detect leaks that can threaten electrical devices, and wiretapping sensors on communication lines. [PE-4: Access Control for Transmission; PE-6: Monitoring Physical Access; PE-15: Water Damage Protection]</li>
+        <li>Run awareness training programs for staff—including non-IT staff—so they can act as human sensors to detect threat activity. Provide a clear, easy, and accessible method for employees to report suspicious activity. [PM-16: Threat Awareness Program]</li>
+        <li>Intercept encrypted communications and allow your sensors to perform deep inspections of unencrypted packets. [AC-4: Information Flow Enforcement: | (4) Content Check Encrypted Information; SC-8: Transmission Confidentiality and Integrity]</li>
+        <li>Implement sensors that can analyze packets and take preventive measures such as blocking or filtering. [SC-5: Denial of Service Protection; SC-7: Boundary Protection | (10) Prevent Exfiltration | (17) Automated Enforcement of Protocol Formats]</li>
+        <li>Prohibit promiscuous sensor activation on non-sensing systems to prevent the release of sensitive information to adversaries who gain unauthorized access. [SC-42: Sensor Capability and Data]</li>
+        <li>Work with your ISP to place Trusted Internet Connection (TIC) sensors outside your network boundary. [AC-17: Remote Access | (3) Managed Access Control Points]</li>
+        <li>Document all internal system connections; their interfaces; the information they process, store, and communicate; and sensor placement between systems. [CA-9: Internal System Connections]</li>
+        <li>Conduct penetration testing and red team exercises to test and validate your sensor placement and capability. [CA-8: Penetration Testing; RA-6: Technical Surveillance Countermeasures Survey]</li>
+    </ol>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

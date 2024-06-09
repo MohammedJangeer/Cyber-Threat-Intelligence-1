@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours of Infiltration Security Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Security Recommendations with Hours of Infiltration in Mind</h1>
+    <div class="recommendations">
+        <div class="recommendation">
+            <h2>1. Evaluate Hours of Operation and Perform Threat Modeling</h2>
+            <p>When are you most vulnerable to attack? What can you do to train your staff to be prepared? <span class="control">[NIST SP 800-154: Guide to Data-Centric System Threat Modeling]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>2. Implement Time-Based Privilege Controls on Accounts</h2>
+            <p>Restrict certain users’ ability to send or receive work email after 7:00 PM. <span class="control">[AC-2: Account Management | (6) Dynamic Privilege Management]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>3. Restrict Login to Specific Accounts During Certain Hours</h2>
+            <p>When there is an attempt to perform unauthorized actions on an inactive account between 9:00 PM and 11:00 PM, alert the user immediately to verify their identity. If they are unresponsive or their authentication fails, alert the SOC. <span class="control">[AC-2: Account Management | (11) Usage Conditions]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>4. Leverage Heuristic Analysis Systems to Detect Abnormal System Access</h2>
+            <p>Users should voluntarily document and provide insight into their “typical usage” patterns to help model their expected behavior during their workday. <span class="control">[AC-2: Account Management | (12) Account monitoring for A-typical Usage]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>5. Require System Owners and Users to Document System Usage Times</h2>
+            <p>Document when systems are expected to be in use and when they could be powered off. <span class="control">[AC-3: Access Enforcement | (5) Security Relevant Information]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>6. Shrink the Time Frame for Accessing Sensitive Information</h2>
+            <p>Define a strategic enterprise policy whereby sensitive or proprietary information should be accessed only during set times—for instance, between 11:00 AM and 3:00 PM on weekdays. <span class="control">[AC-17: Remote Access | (9) Disconnect/Disable Access]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>7. Inform Users about Successful or Unsuccessful Logins</h2>
+            <p>Tracking this information helps a user alert the SOC if their account has been compromised and tell the SOC when the unauthorized access occurred. <span class="control">[AC-9: Previous Login (Access) Notification | (4) Additional Logon Information]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>8. Automatically Lock User Devices at a Specified Time</h2>
+            <p>After establishing times of operation, configure user devices and systems to automatically lock at a specified time, terminating all sessions. <span class="control">[AC-11: Session Lock]</span></p>
+        </div>
+        <div class="recommendation">
+            <h2>9. Document a Policy for Allowed Changes to Infrastructure and Systems</h2>
+            <p>This assists the SOC when evaluating network and configuration changes on an hour-by-hour basis. <span class="control">[AU-12: Audit Generation | (1) System Wide and Time Audit Correlation Trail; CM-5: Access Restrictions for Change]</span></p>
+        </div>
+    </div>
+</body>
+</html>

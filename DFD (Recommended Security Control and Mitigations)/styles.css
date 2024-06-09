@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#dfd {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.node text {
+    pointer-events: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.link {
+    fill: none;
+    stroke: #999;
+    stroke-width: 2px;
+}
+
+.trust-boundary {
+    stroke: red;
+    stroke-dasharray: 5,5;
+    fill: none;
+}
+
+.security-control {
+    fill: green;
+}
+
+.security-control-text {
+    font-size: 10px;
+    font-weight: bold;
+    fill: green;
+}

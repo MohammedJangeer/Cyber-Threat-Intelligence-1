@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle Theory Network Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Security Conrol and Anaomaly Detection</h1>
+    <p>
+        This diagram represents a network security model based on the Castle Theory. In this model, each component of the network is analogous to parts of a medieval castle. The following controls are implemented:
+    </p>
+    <h2>Time-Based Access Controls</h2>
+    <p>
+        Time-based access controls are security measures that restrict access to network components based on the time of day. Each device or component in the network is assigned specific access times during which it can operate. This ensures that access is limited to certain periods, reducing the risk of unauthorized access during off-hours. The access times for each component are displayed in green text next to the nodes in the diagram.
+    </p>
+    <h2>Anomaly Detection</h2>
+    <p>
+        Anomaly detection is a crucial aspect of network security, aimed at identifying and responding to unusual patterns of behavior that may indicate a security threat. In this model, if an anomaly is detected, it is highlighted in red on the respective component. The course of action for SOC analysts is to validate, analyze, isolate, notify, and document the incident. This step-by-step process ensures a thorough response to potential security breaches.
+    </p>
+    <div id="dfd"></div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

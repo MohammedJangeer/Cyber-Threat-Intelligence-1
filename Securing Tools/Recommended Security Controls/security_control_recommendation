@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Least Functionality Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Least Functionality Assessment</h1>
+    </header>
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The "principle of least functionality" involves disabling, deleting, and restricting access to unnecessary software and system functions in your environment. This helps enhance security by reducing the attack surface.</p>
+        </section>
+        
+        <section id="periodic-reviews">
+            <h2>Periodic Reviews</h2>
+            <p>Regularly review the functions, tools, and software used for each role and system to determine their necessity. Establish a system to register, track, and manage these tools.</p>
+        </section>
+        
+        <section id="restrict-tool-usage">
+            <h2>Restrict Tool Usage</h2>
+            <p>Document all tools that users or systems could leverage and restrict users from using these tools for functions outside their roles in the organization.</p>
+        </section>
+        
+        <section id="whitelist-blacklist">
+            <h2>Whitelist and Blacklist</h2>
+            <p>Implement a whitelist for authorized software and a blacklist for unauthorized software. This helps control the software allowed to run in the environment.</p>
+        </section>
+        
+        <section id="boundary-restrictions">
+            <h2>Boundary Restrictions</h2>
+            <p>Physically and network-wise restrict hardware and software tools. Consider segregating sensitive tools and limiting access using JEA/JIT access controls.</p>
+        </section>
+        
+        <section id="evaluate-installed-software">
+            <h2>Evaluate Installed Software</h2>
+            <p>Analyze installed software to identify imports, APIs, functional calls, and hooks used by safe applications. Consider malcode protections to block tools that use unusual implementations.</p>
+        </section>
+    </main>
+</body>
+</html>

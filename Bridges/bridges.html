@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Potential Bridges
+    </h1>
+    <div id="network-map">
+        <div class="device router" id="core-router" data-info="Core Router with several vulnerabilities (CVE-2017-14187, CVE-2017-14189, etc.). Implement firewall rules and segment the network.">
+            Core-Router
+        </div>
+        <div class="device firewall" id="firewall1" data-info="FortiGate 50 firewall. Ensure latest firmware updates and monitor logs.">
+            Firewall1
+        </div>
+        <div class="device switch" id="gateway-switch" data-info="Cisco Catalyst 2960 Switch. Regularly update and monitor for unauthorized access.">
+            Gateway-Switch
+        </div>
+        <div class="device host" id="host1" data-info="Web server with several vulnerabilities (CVE-2017-9798, CVE-2016-8612, etc.). Ensure updates and use WAF.">
+            example.com
+        </div>
+        <div class="device host" id="host2" data-info="WebEx Panel. Monitor and secure access.">
+            WebEx Panel
+        </div>
+
+        <!-- Data flows -->
+        <div class="data-flow" id="flow1"></div>
+        <div class="data-flow" id="flow2"></div>
+        <div class="data-flow" id="flow3"></div>
+        <div class="data-flow" id="flow4"></div>
+    </div>
+    <div id="info-panel">
+        <h2>Device Information</h2>
+        <p id="device-info">Click on a device to see details.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matched-Pair Identification and Authentication Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <p>Implement session locks after set periods of time for privileged accounts, upon privileged user requests, or in reaction to suspicious behavior. Only reestablish access after the user provides a matched-pair challenge response.</p>
+            <p>Security Control:</p>
+            <p>AC-11: Session Lock</p>
+        </div>
+        <div class="box" id="box2">
+            <p>Identify, document, and enforce security controls on which user actions may be performed on a system without passing the matched-pair challenge response—for example, contacting technical support or making emergency calls.</p>
+            <p>Security Control:</p>
+            <p>AC-14: Permitted Actions Without Identification or Authentication</p>
+        </div>
+        <div class="box" id="box3">
+            <p>Develop matched-pair authentication processes that are resistant to replay attacks by establishing large sets of one-time challenge response authenticators.</p>
+            <p>Security Control:</p>
+            <p>IA-2: Identification and Authentication (Organizational Users) - (8) Network Access to Privileged Accounts—Replay Resistant</p>
+        </div>
+        <div class="box" id="box4">
+            <p>Capture information that uniquely identifies user devices requesting authentication to gain intelligence on unidentified adversaries who fail the matched-pair challenge response.</p>
+            <p>Security Control:</p>
+            <p>IA-3: Device Identification and Authentication - (4) Device Attestation</p>
+        </div>
+        <div class="box" id="box5">
+            <p>Require in-person matched-pair input to mitigate compromise of the challenge response identification system.</p>
+            <p>Security Control:</p>
+            <p>IA-4: Identifier Management - (7) In-Person Registration</p>
+        </div>
+        <div class="box" id="box6">
+            <p>Physically and logically segregate the matched-pair challenge response system and enforce strict access controls to safeguard it against compromise.</p>
+            <p>Security Control:</p>
+            <p>IA-5: Authenticator Management - (6) Protection of Authenticators</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

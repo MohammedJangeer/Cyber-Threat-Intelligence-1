@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Time Control Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Network Time Control Visualisation</h1>
+    <div class="network">
+        <div class="component" id="core-router">
+            <span>Core Router</span>
+            <button onclick="toggleAccess('core-router')">Toggle Access</button>
+        </div>
+        <div class="component" id="firewall">
+            <span>Firewall</span>
+            <button onclick="toggleAccess('firewall')">Toggle Access</button>
+        </div>
+        <div class="component" id="gateway-switch">
+            <span>Gateway Switch</span>
+            <button onclick="toggleAccess('gateway-switch')">Toggle Access</button>
+        </div>
+        <div class="user" id="admin-user">
+            <span>Admin User</span>
+            <button onclick="toggleAccess('admin-user')">Toggle Access</button>
+        </div>
+        <div class="user" id="standard-user">
+            <span>Standard User</span>
+            <button onclick="toggleAccess('standard-user')">Toggle Access</button>
+        </div>
+    </div>
+    <div class="logs">
+        <h2>Activity Logs</h2>
+        <ul id="log-list">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Controls and Mitigations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Recommended Security Controls and Mitigations</h1>
+    <div class="control">
+        <h2>1. Implement protections that block access to time data in timestamp logs or other information-monitoring logs.</h2>
+        <p>
+            Preventing time spillage or timestamp leakage could require physical, environmental, media, and technical controls.
+        </p>
+        <p><strong>Applicable NIST 800-53 Control:</strong> AU-9: Protection of Audit Information</p>
+    </div>
+    <div class="control">
+        <h2>2. Review your current information architecture with respect to time.</h2>
+        <p>
+            Including the philosophy, requirements, and tactics necessary to implement access and confidentiality controls around time data in your environment. If stakeholders agree to time restrictions, document them in a security plan with an approved budget, resources, and time dedicated to implementation.
+        </p>
+        <p><strong>Applicable NIST 800-53 Control:</strong> PL-8: Information Security Architecture</p>
+    </div>
+    <div class="control">
+        <h2>3. Conduct a log review and internal hunt to discover communication occurring over port 123 to any unofficial NTP servers in your environment.</h2>
+        <p>
+            Look for NTP communication to external NTP servers and consider blocking access to NTP servers you do not control.
+        </p>
+        <p><strong>Applicable NIST 800-53 Control:</strong> SC-7: Boundary Protection</p>
+    </div>
+</body>
+</html>
