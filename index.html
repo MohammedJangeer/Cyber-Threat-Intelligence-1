@@ -3,32 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Infrastructure Data Flow Diagram</title>
+    <title>Defenses Against Social Engineering</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>IT Infrastructure Data Flow Diagram</h1>
-    <div id="network-map-container">
-        <svg id="network-map"></svg>
-    </div>
-    
-    <div id="controls-section">
-        <h2>Recommended Security Controls and Mitigations</h2>
-        <ul>
-            <li>
-                <strong>Assign responsibilities for documenting a network map.</strong> Implement policies and procedures to coordinate updates of the map between teams. [CM-1: Configuration Management Policy and Procedures; CM-3: Configuration Change Control | (4) Security Representative; CM-9: Configuration Management Plan]
-            </li>
-            <li>
-                <strong>To establish a baseline, document the configuration of the network’s topology, architecture, logical placement, and information systems.</strong> [CM-2: Baseline Configuration]
-            </li>
-            <li>
-                <strong>Incorporate flaw identification (such as map inaccuracies) and remediation (for example, of vulnerabilities inherent in the network architecture) into the network-mapping process.</strong> [SI-2: Flaw Remediation]
-            </li>
-        </ul>
-    </div>
-
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
-    <script src="script.js"></script>
+    <header>
+        <h1>Defenses Against Social Engineering</h1>
+    </header>
+    <main>
+        <section id="safeguards">
+            <h2>1. Establish Safeguards</h2>
+            <p>Implement standard trust frameworks for employees to reduce the risk of compromise by social engineering. Identify high-value targets in your environment, and then establish security protocols, policies, and procedures for the appropriate control and handling of sensitive information on those systems.</p>
+            <button onclick="toggleContent('safeguardsContent')">Learn More</button>
+            <div id="safeguardsContent" class="hidden">
+                <ul>
+                    <li>Conduct training, awareness, and test exercises within your organization.</li>
+                    <li>Iterative threat modeling to review and improve related security controls.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="slow-thinking">
+            <h2>2. Implement “Slow Thinking”</h2>
+            <p>Develop solutions that force your employees to slow down and think in logical terms, thereby avoiding the cognitive biases and shortcuts social engineers most often exploit.</p>
+            <button onclick="toggleContent('slowThinkingContent')">Learn More</button>
+            <div id="slowThinkingContent" class="hidden">
+                <ul>
+                    <li>Configuring your phone-switching system to require extra verification steps.</li>
+                    <li>Configuring your mail client to require additional steps before opening external email attachments.</li>
+                    <li>Requiring users visiting non-whitelisted URLs to perform verification tasks.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="nist-controls">
+            <h2>Recommended Security Controls and Mitigations</h2>
+            <p>Implement safeguards and controls from the NIST 800-53 standard to protect information and systems from social engineering attacks.</p>
+            <button onclick="toggleContent('nistControlsContent')">Learn More</button>
+            <div id="nistControlsContent" class="hidden">
+                <ul>
+                    <li>AC-3: Access Enforcement | (9) Controlled Release</li>
+                    <li>PE-3: Physical Access Control | (2) Facility/Information System Boundaries</li>
+                    <li>SC-7: Boundary Protection</li>
+                    <li>AC-4: Information Flow Enforcement</li>
+                    <li>PL-8: Information Security Architecture</li>
+                    <li>SC-8: Transmission Confidentiality and Integrity</li>
+                    <li>MA-4: Nonlocal Maintenance</li>
+                    <li>MP-5: Media Transport | (1) Protection Outside Controlled Areas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>
