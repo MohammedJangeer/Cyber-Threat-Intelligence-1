@@ -7,5 +7,5 @@ Creating a thorough network map involves gathering internal data like router con
 Network Map.pdf
 (Detailed network map, to view the pdf, please see in the repository.)
 
-https://mohammedjangeer2023.github.io/CyberThreatIntelligence/
-(Detailed Data Flow Diagram)
+
+
