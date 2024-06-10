@@ -44,6 +44,26 @@ g.setEdge("File Server", "Network Storage", { label: "stores in" });
 g.setEdge("Web Server", "Cloud Service", { label: "accesses" });
 g.setEdge("App Server", "Third-Party API", { label: "accesses" });
 
+// Add threat modeling information (STRIDE)
+const threats = {
+    "Admin User": "Potential for elevation of privilege",
+    "Standard User": "Potential for spoofing identity",
+    "Desktop": "Potential for tampering with data",
+    "Laptop": "Potential for information disclosure",
+    "Mobile Device": "Potential for denial of service",
+    "Router": "Potential for tampering with data",
+    "Switch": "Potential for information disclosure",
+    "Firewall": "Potential for denial of service",
+    "Web Server": "Potential for elevation of privilege",
+    "App Server": "Potential for information disclosure",
+    "Database Server": "Potential for tampering with data",
+    "File Server": "Potential for information disclosure",
+    "Cloud Service": "Potential for denial of service",
+    "Third-Party API": "Potential for information disclosure",
+    "Local Storage": "Potential for tampering with data",
+    "Network Storage": "Potential for information disclosure"
+};
+
 const svg = d3.select("#network-map");
 const inner = svg.append("g");
 
@@ -68,3 +88,22 @@ window.addEventListener("resize", () => {
 });
 
 window.dispatchEvent(new Event('resize'));
+
+// Add tooltips for threats
+const tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
+d3.selectAll(".node").on("mouseover", function (event, d) {
+    const node = d3.select(this).select("rect");
+    const nodeName = node.text();
+
+    tooltip.transition()
+        .duration(200)
+        .style("opacity", .9);
+    tooltip.html(`<strong>${nodeName}</strong><br/>Threat: ${threats[nodeName]}`)
+        .style("left", (event.pageX + 5) + "px")
+        .style("top", (event.pageY - 28) + "px");
+}).on("mouseout", function (event, d) {
+    tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
+});
