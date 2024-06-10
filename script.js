@@ -37,65 +37,54 @@ g.setEdge("Firewall", "File Server", { label: "secures" });
 
 g.setEdge("Web Server", "Database Server", { label: "queries" });
 g.setEdge("App Server", "Database Server", { label: "queries" });
+
 g.setEdge("Web Server", "Local Storage", { label: "stores in" });
 g.setEdge("App Server", "Network Storage", { label: "stores in" });
-g.setEdge("File Server", "Network Storage", { label: "stores in" });
 
-g.setEdge("Web Server", "Cloud Service", { label: "accesses" });
-g.setEdge("App Server", "Third-Party API", { label: "accesses" });
-
-// Add threat modeling information (STRIDE)
-const threats = {
-    "Admin User": "Potential for elevation of privilege",
-    "Standard User": "Potential for spoofing identity",
-    "Desktop": "Potential for tampering with data",
-    "Laptop": "Potential for information disclosure",
-    "Mobile Device": "Potential for denial of service",
-    "Router": "Potential for tampering with data",
-    "Switch": "Potential for information disclosure",
-    "Firewall": "Potential for denial of service",
-    "Web Server": "Potential for elevation of privilege",
-    "App Server": "Potential for information disclosure",
-    "Database Server": "Potential for tampering with data",
-    "File Server": "Potential for information disclosure",
-    "Cloud Service": "Potential for denial of service",
-    "Third-Party API": "Potential for information disclosure",
-    "Local Storage": "Potential for tampering with data",
-    "Network Storage": "Potential for information disclosure"
-};
-
-const svg = d3.select("#network-map");
-const inner = svg.append("g");
+g.setEdge("Web Server", "Cloud Service", { label: "requests" });
+g.setEdge("App Server", "Third-Party API", { label: "requests" });
 
 const render = new dagreD3.render();
-render(inner, g);
+const svg = d3.select("svg"),
+    svgGroup = svg.append("g");
 
-const svgGroup = svg.select("g");
-const zoom = d3.zoom().on("zoom", (event) => {
+render(d3.select("svg g"), g);
+
+const xCenterOffset = (svg.attr("width") - g.graph().width) / 2;
+svgGroup.attr("transform", "translate(" + xCenterOffset + ", 20)");
+svg.attr("height", g.graph().height + 40);
+
+// Zoom functionality
+const zoom = d3.zoom().on("zoom", function (event) {
     svgGroup.attr("transform", event.transform);
 });
 svg.call(zoom);
 
-const initialScale = 0.75;
-svg.call(zoom.transform, d3.zoomIdentity.translate((svg.node().clientWidth - g.graph().width * initialScale) / 2, 20).scale(initialScale));
+const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
 
-svg.attr("height", g.graph().height * initialScale + 40);
+const threats = {
+    "Admin User": "Potential insider threat, privileged account misuse",
+    "Standard User": "Phishing attacks, social engineering",
+    "Desktop": "Malware infection, unauthorized access",
+    "Laptop": "Lost/stolen device, unauthorized access",
+    "Mobile Device": "Unsecured Wi-Fi, lost/stolen device",
+    "Router": "DDoS attacks, configuration flaws",
+    "Switch": "Physical tampering, misconfigurations",
+    "Firewall": "Misconfigurations, DDoS attacks",
+    "Web Server": "SQL injection, cross-site scripting",
+    "App Server": "Code injection, API vulnerabilities",
+    "Database Server": "SQL injection, data breaches",
+    "File Server": "Ransomware, unauthorized access",
+    "Cloud Service": "Data breaches, API vulnerabilities",
+    "Third-Party API": "Data leakage, insecure communication",
+    "Local Storage": "Physical theft, unauthorized access",
+    "Network Storage": "Data breaches, ransomware"
+};
 
-// Make the SVG responsive
-window.addEventListener("resize", () => {
-    svg.attr("width", svg.node().clientWidth)
-        .attr("height", svg.node().clientHeight);
-});
-
-window.dispatchEvent(new Event('resize'));
-
-// Add tooltips for threats
-const tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
-
-d3.selectAll(".node").on("mouseover", function (event, d) {
-    const node = d3.select(this).select("rect");
-    const nodeName = node.text();
-
+d3.selectAll("g.node").on("mouseover", function (event, d) {
+    const nodeName = d;
     tooltip.transition()
         .duration(200)
         .style("opacity", .9);
