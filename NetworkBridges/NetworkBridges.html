@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Boundary Bridging: A Security Threat and Mitigation Strategies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Network Boundary Bridging: A Security Threat and Mitigation Strategies</h1>
+    
+    <div id="content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                This passage discusses network bridging, a technique attackers use to bypass security controls and gain unauthorised access to a network.
+            </p>
+        </section>
+        
+        <section id="what-is-bridging">
+            <h2>What is Network Bridging?</h2>
+            <p>
+                In cybersecurity, a bridge connects two separate network segments, allowing devices on each segment to communicate with each other. However, unlike traditional network devices, bridges operate at a lower level, potentially bypassing security controls like firewalls.
+            </p>
+        </section>
+
+        <section id="dangers-of-bridging">
+            <h2>Dangers of Bridging</h2>
+            <ul>
+                <li><strong>Data Exfiltration:</strong> Attackers can use bridges to steal sensitive data from a network.</li>
+                <li><strong>Malicious Code Injection:</strong> Bridges can be used to introduce malware onto a network.</li>
+                <li><strong>Security Control Bypass:</strong> Bridges can render firewalls and other security measures ineffective.</li>
+            </ul>
+        </section>
+
+        <section id="traditional-techniques">
+            <h2>Traditional Bridging Techniques</h2>
+            <ul>
+                <li><strong>Disabled Network Bridging:</strong> Leaving network bridging enabled on devices like wireless cards can create vulnerabilities.</li>
+                <li><strong>Multiple Network Interfaces:</strong> Systems with two or more active network interfaces can be exploited for bridging.</li>
+            </ul>
+        </section>
+
+        <section id="advanced-techniques">
+            <h2>Advanced Bridging Techniques (Research/Lab Environments)</h2>
+            <ul>
+                <li><strong>LED Covert Communication:</strong> Manipulating system LEDs to transmit data via light signals.</li>
+                <li><strong>FM Frequency Exploitation:</strong> Using FM radio frequencies to communicate with nearby devices (e.g., AirHopper exploit).</li>
+                <li><strong>Acoustic Data Transmission:</strong> Controlling fans to send data through sound waves (e.g., BitWhisper exploit).</li>
+                <li><strong>Power Line Communication:</strong> Exploiting the power grid to transmit data (Ethernet over Power - EOP).</li>
+                <li><strong>VoIP Spying:</strong> Hijacking VoIP phone microphones and speakers for audio eavesdropping.</li>
+            </ul>
+        </section>
+
+        <section id="low-tech-techniques">
+            <h2>Low-Tech Bridging Techniques</h2>
+            <ul>
+                <li><strong>Physical Network Splicing:</strong> Gaining physical access to network cables to inject unauthorised devices.</li>
+                <li><strong>Sneakernet:</strong> Manually transferring data on removable media, bypassing network controls.</li>
+                <li><strong>Hidden Management Networks:</strong> Exploiting the internal network used to manage routers and firewalls for unauthorised access.</li>
+                <li><strong>Split Tunneling:</strong> VPN connections that allow data leakage between networks.</li>
+            </ul>
+        </section>
+
+        <section id="mitigating-risks">
+            <h2>Mitigating Bridging Risks</h2>
+            <ul>
+                <li><strong>Identify Critical Assets:</strong> Locate and prioritise the most sensitive data within your network.</li>
+                <li><strong>Data Flow Mapping:</strong> Create a detailed model of how data moves within your network to identify potential bridging points.</li>
+                <li><strong>Implement Bridge Countermeasures:</strong>
+                    <ul>
+                        <li><strong>TEMPEST Controls:</strong> Shielding sensitive systems (Faraday cages) to block covert signal-based bridging.</li>
+                        <li><strong>Device Authentication:</strong> Enforce authentication protocols before allowing devices to connect to your network.</li>
+                        <li><strong>Threat Modelling:</strong> Identify potential bridging threats and implement targeted safeguards.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="best-practices">
+            <h2>Best Practices</h2>
+            <ul>
+                <li><strong>Network Boundary Protection:</strong> Implement controls to prevent unauthorised devices and networks from accessing your internal network.</li>
+                <li><strong>Wireless Security:</strong> Enforce strong wireless access controls to detect and block unauthorised wireless signals.</li>
+                <li><strong>Network Access Audits:</strong> Regularly audit network connections to identify potential bridging points.</li>
+                <li><strong>Portable Media Policy:</strong> Implement strict policies for using portable media devices on your network, requiring authentication before connection.</li>
+                <li><strong>TEMPEST Testing:</strong> Conduct regular testing to identify potential information leakage through electromagnetic signals.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                Network bridging poses a serious threat to network security. By understanding the different bridging techniques and implementing a layered approach that combines preventative measures, detection strategies, and ongoing vigilance, organisations can significantly reduce their bridging risks.
+            </p>
+        </section>
+        
+        <div id="network-map-container">
+            <svg id="network-map"></svg>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

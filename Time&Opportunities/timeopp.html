@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding User Activity Patterns to Enhance Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Understanding User Activity Patterns to Enhance Security</h1>
+    
+    <div id="content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                This page discusses using time-based controls to improve cybersecurity by analyzing user activity patterns.
+            </p>
+        </section>
+        
+        <section id="why-user-activity-patterns-matter">
+            <h2>Why User Activity Patterns Matter</h2>
+            <ul>
+                <li><strong>Predictable Schedules:</strong> Attackers exploit predictable work schedules, targeting times when employees are most vulnerable (distracted, tired).</li>
+                <li><strong>Network Activity Fluctuations:</strong> Network usage varies throughout the day, with peak periods offering opportunities to mask malicious activity.</li>
+            </ul>
+        </section>
+
+        <section id="time-based-security-strategies">
+            <h2>Time-Based Security Strategies</h2>
+            <h3>Baseline Network Activity</h3>
+            <ul>
+                <li>Segment network logs by time (e.g., hourly).</li>
+                <li>Analyze historical data to establish typical activity patterns for different times of day.</li>
+                <li>Identify vulnerable times based on past attacks or threat modeling.</li>
+            </ul>
+            <h3>Training Security Personnel</h3>
+            <ul>
+                <li>Teach analysts to recognize deviations from baseline activity patterns.</li>
+                <li>Raise awareness of security risks associated with specific work routines.</li>
+                <li>Encourage focused monitoring of critical systems during assigned hours.</li>
+            </ul>
+            <h3>Aligning Security with Business Needs</h3>
+            <ul>
+                <li>Analyze user/system activity times to strategically limit access.</li>
+                <li>Disable unused systems during off-peak hours to reduce potential attack surfaces.</li>
+                <li>Implement time-based access controls based on business needs (e.g., restricting email access after work hours).</li>
+            </ul>
+        </section>
+
+        <section id="security-controls-mitigations">
+            <h2>Security Controls and Mitigations (based on NIST 800-53 standards)</h2>
+            <ul>
+                <li><strong>Account Management (AC-2):</strong>
+                    <ul>
+                        <li>Implement time-based privilege controls (restrict access during specific hours).</li>
+                        <li>Limit login/use of specific accounts during off-peak hours and alert for unauthorized attempts.</li>
+                        <li>Leverage user input to establish expected usage patterns and detect anomalies.</li>
+                    </ul>
+                </li>
+                <li><strong>Access Enforcement (AC-3):</strong>
+                    <ul>
+                        <li>Require system owners to document expected usage times and power-off schedules.</li>
+                    </ul>
+                </li>
+                <li><strong>Remote Access (AC-17):</strong>
+                    <ul>
+                        <li>Define a policy restricting access to sensitive information during specific times.</li>
+                    </ul>
+                </li>
+                <li><strong>Previous Login Notification (AC-9):</strong>
+                    <ul>
+                        <li>Inform users of successful/unsuccessful login attempts with timestamps to identify potential compromises.</li>
+                    </ul>
+                </li>
+                <li><strong>Session Lock (AC-11):</strong>
+                    <ul>
+                        <li>Configure devices/systems to automatically lock and terminate sessions at a set time.</li>
+                    </ul>
+                </li>
+                <li><strong>Time Stamps (AU-8):</strong>
+                    <ul>
+                        <li>Ensure all logs and alerts have timestamps for accurate time-based analysis.</li>
+                    </ul>
+                </li>
+                <li><strong>Audit Generation (AU-12):</strong>
+                    <ul>
+                        <li>Document a policy specifying authorized times for infrastructure/system changes.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                By understanding user activity patterns and strategically implementing time-based controls, organizations can significantly strengthen their security posture and make it more difficult for attackers to infiltrate their systems.
+            </p>
+        </section>
+        
+        <div id="network-map-container">
+            <svg id="network-map"></svg>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

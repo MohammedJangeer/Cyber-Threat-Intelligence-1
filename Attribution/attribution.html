@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demystifying Attribution in Cybersecurity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Demystifying Attribution in Cybersecurity</h1>
+    
+    <div id="content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                This passage explains attribution, the process of identifying the culprit behind a cyberattack. Understanding the attacker's motives and capabilities is crucial for crafting effective security responses.
+            </p>
+        </section>
+        
+        <section id="challenges-of-attribution">
+            <h2>Challenges of Attribution</h2>
+            <ul>
+                <li><strong>Anonymity:</strong> The internet facilitates anonymity, making it difficult to trace attacks back to their source.</li>
+                <li><strong>Deception:</strong> Attackers can use various techniques like spoofing IP addresses and encryption to mask their identities.</li>
+                <li><strong>Limited Evidence:</strong> Even after identifying the origin of an attack, pinpointing the specific attacker can be challenging.</li>
+            </ul>
+        </section>
+
+        <section id="importance-of-evidence">
+            <h2>Importance of Evidence Collection</h2>
+            <ul>
+                <li><strong>Memory Dumps:</strong> Capturing system memory snapshots can reveal traces of malicious code.</li>
+                <li><strong>Log Files:</strong> Analyzing logs from various network devices can provide clues about attackers' activities.</li>
+                <li><strong>Network Traffic:</strong> Monitoring network traffic can identify unusual communication patterns associated with attacks.</li>
+                <li><strong>Open Source Intelligence (OSINT):</strong> Publicly available information can offer insights into attacker profiles and motivations.</li>
+            </ul>
+        </section>
+
+        <section id="approaches-to-attribution">
+            <h2>Approaches to Attribution</h2>
+            <ul>
+                <li><strong>Be Skeptical:</strong> Don't rely solely on initial evidence; consider the possibility of deception.</li>
+                <li><strong>Invest in Attribution Capabilities:</strong> Implement technologies and processes to collect and analyze forensic data.</li>
+                <li><strong>Focus on Threat Mitigation:</strong> Even without definitive attribution, focus on actions that reduce the risk of future attacks.</li>
+            </ul>
+        </section>
+
+        <section id="nist-controls">
+            <h2>NIST Security Controls and Mitigations</h2>
+            <ul>
+                <li><strong>SA-12: Supply Chain Protection (14): Identity and Traceability:</strong> Link user accounts to real identities for accountability.</li>
+                <li><strong>IR-8: Incident Response:</strong> Develop a plan for handling attribution assessments during security incidents.</li>
+                <li><strong>PM-16: Threat Awareness Program:</strong> Educate employees on identifying attacker characteristics and collecting evidence for attribution.</li>
+                <li><strong>SC-26: HoneyPots:</strong> Deploy honeypots (decoy systems) to attract attackers and gather intelligence on their tactics.</li>
+                <li><strong>SA-8: Security and Privacy Engineering Principles:</strong> Conduct threat modeling to identify potential attackers.</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                By understanding the challenges and importance of attribution in cybersecurity, organizations can better prepare to identify and mitigate threats, enhancing their overall security posture.
+            </p>
+        </section>
+        
+        <div id="network-map-container">
+            <svg id="network-map"></svg>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

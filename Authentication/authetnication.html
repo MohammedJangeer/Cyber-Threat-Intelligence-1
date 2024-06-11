@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Password - Exploring Matched-Pair Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Beyond Password - Exploring Matched-Pair Authentication</h1>
+    
+    <div id="content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Passwords are a mainstay of online security, but they're increasingly vulnerable to breaches and sophisticated attacks. This raises the question: how can we improve user authentication methods? One promising approach is "matched-pair authentication," a multi-factor system that offers stronger security than traditional password-based methods.
+            </p>
+        </section>
+        
+        <section id="what-is-matched-pair-authentication">
+            <h2>What is Matched-Pair Authentication?</h2>
+            <p>
+                Imagine being asked a secret question you created beforehand, like "What was the name of your favorite childhood pet?" This is the essence of matched-pair authentication. The system presents a challenge (the "first pair"), and the user responds with the corresponding answer (the "second pair"). Unlike passwords, these pairs are not stored on the system and are more resistant to hacking.
+            </p>
+        </section>
+
+        <section id="benefits">
+            <h2>Benefits of Matched-Pair Authentication</h2>
+            <ul>
+                <li>
+                    <strong>Enhanced Security:</strong> Since matched-pair credentials are not directly stored, they're less susceptible to brute-force attacks or data breaches.
+                </li>
+                <li>
+                    <strong>Reduced Reliance on Passwords:</strong> This method offers an alternative to complex passwords that users often forget or write down.
+                </li>
+                <li>
+                    <strong>Multi-Factor Advantage:</strong> Matched-pair adds an extra layer of security beyond traditional single-factor authentication (password) or two-factor authentication (password + code).
+                </li>
+            </ul>
+        </section>
+
+        <section id="implementation-strategies">
+            <h2>Implementation Strategies</h2>
+            <ul>
+                <li>
+                    <strong>Challenge-Response Design:</strong> Develop a system that presents users with dynamic challenges (e.g., images, words) and requires them to respond with the pre-configured answer (the "pair").
+                </li>
+                <li>
+                    <strong>Integration with Existing Systems:</strong> Ideally, matched-pair challenges can be integrated with existing login procedures for a seamless user experience.
+                </li>
+                <li>
+                    <strong>Security Considerations:</strong> Ensure secure storage and transmission of matched-pair data to prevent compromise. Consider in-person registration or multi-device verification for added security. <em>NIST SP 800-53 controls: IA-2, IA-3, IA-4, IA-5, IA-10, IA-11, AC-11, AC-14</em>
+                </li>
+            </ul>
+        </section>
+
+        <section id="beyond-matched-pairs">
+            <h2>Beyond Matched-Pairs: A Layered Approach</h2>
+            <p>
+                Matched-pair authentication is a valuable tool, but it's most effective as part of a layered security strategy. Combining it with strong passwords, session timeouts, and device verification strengthens your overall security posture.
+            </p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                As cyber threats evolve, authentication methods need to adapt. Matched-pair authentication offers a secure and user-friendly solution for a world increasingly reliant on online access. By implementing this approach alongside other security measures, organizations can create a more robust defense against unauthorized access.
+            </p>
+        </section>
+        
+        <div id="network-map-container">
+            <svg id="network-map"></svg>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

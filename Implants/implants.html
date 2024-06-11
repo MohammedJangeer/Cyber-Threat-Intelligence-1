@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Supply Chain Attacks: A Stealthy Threat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Modern Supply Chain Attacks: A Stealthy Threat</h1>
+    
+    <div id="content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                This passage explores "ghost in the machine" attacks, a sophisticated type of supply chain attack where malicious implants are embedded in hardware or software during manufacturing.
+            </p>
+        </section>
+        
+        <section id="traditional-vs-modern">
+            <h2>Traditional Espionage vs. Modern Techniques</h2>
+            <ul>
+                <li><strong>Human Agents:</strong> Traditionally, corporate espionage relied on human agents placed within organizations.</li>
+                <li><strong>Covert Implants:</strong> Modern attackers exploit the globalized supply chain, inserting hidden implants that provide unauthorized access.</li>
+            </ul>
+        </section>
+
+        <section id="ghost-in-machine">
+            <h2>Ghost in the Machine Attacks Explained</h2>
+            <ul>
+                <li><strong>Compromised Components:</strong> Attackers introduce malicious implants during manufacturing of hardware (routers, network cards) or software.</li>
+                <li><strong>Difficult Detection:</strong> These implants are designed to be undetectable by traditional security measures.</li>
+            </ul>
+        </section>
+
+        <section id="defense-challenges">
+            <h2>Challenges of Defense</h2>
+            <ul>
+                <li><strong>Widespread Access:</strong> Implants can provide access to a vast range of systems and data within an organization.</li>
+                <li><strong>Persistence:</strong> Implants are often designed to remain undetected for long periods.</li>
+            </ul>
+        </section>
+
+        <section id="identifying-components">
+            <h2>Identifying Vulnerable Components</h2>
+            <ul>
+                <li><strong>High-Trust Elements:</strong> Focus on components with high privileges and access to sensitive information.</li>
+                <li><strong>Communication Capabilities:</strong> Identify components that can communicate externally or control other systems.</li>
+                <li><strong>Difficult Inspection:</strong> Prioritize components that are rarely replaced, updated, or inspected.</li>
+            </ul>
+        </section>
+
+        <section id="protective-measures">
+            <h2>Protective Measures</h2>
+            <ul>
+                <li><strong>Threat Analysis:</strong> Evaluate potential risks associated with different suppliers and components.</li>
+                <li><strong>Secure Supply Chain:</strong> Implement secure shipping practices and conduct inspections upon delivery.</li>
+                <li><strong>Tamper Detection:</strong> Use security features that can identify unauthorized modifications.</li>
+                <li><strong>Supply Chain Diversity:</strong> Incorporate components from various vendors to reduce reliance on a single source. (NIST 800-53 SC-29)</li>
+                <li><strong>Acquisition Strategies:</strong> Employ blind buying, trusted shipping, and vendor restrictions to mitigate risks. (NIST 800-53 SA-12)</li>
+                <li><strong>Delayed Updates:</strong> Consider delaying updates or acquisitions to limit opportunities for attackers. (NIST 800-53 SA-12)</li>
+                <li><strong>Component Verification:</strong> Purchase from multiple vendors and compare components to identify discrepancies. (NIST 800-53 SA-12, SA-19, SI-7)</li>
+                <li><strong>Monitoring:</strong> Implement independent monitoring to detect suspicious activity or data alterations. (NIST 800-53 SI-4)</li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                Ghost in the machine attacks pose a significant challenge, but by implementing a combination of preventive and detective measures, organizations can improve their resilience against this evolving threat.
+            </p>
+        </section>
+        
+        <div id="network-map-container">
+            <svg id="network-map"></svg>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/dagre-d3@0.6.4/dist/dagre-d3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

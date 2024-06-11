@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command and Control (C2) Communication in a Professional Environment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Command and Control (C2) Communication in a Professional Environment</h1>
+
+    <div class="section">
+        <h2>What is C2 Communication?</h2>
+        <p>Malware on compromised systems needs instructions from attackers. C2 communication establishes a channel for attackers to send commands and receive data. This can involve downloading additional malware, stealing data, or launching further attacks.</p>
+    </div>
+
+    <div class="section">
+        <h2>Why is C2 a Threat?</h2>
+        <ul>
+            <li><strong>Persistent Access:</strong> C2 allows attackers to maintain a foothold in a network for extended periods.</li>
+            <li><strong>Remote Control:</strong> Attackers can use C2 to issue commands and adapt their tactics in real-time.</li>
+            <li><strong>Data Exfiltration:</strong> C2 facilitates the theft of sensitive information from compromised systems.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>How Do Attackers Use C2?</h2>
+        <ul>
+            <li><strong>Traditional Methods:</strong> Dedicated servers, domains, or IP addresses act as C2 channels.</li>
+            <li><strong>Evading Detection:</strong> Attackers use obfuscation, encryption, and other techniques to disguise C2 traffic.</li>
+            <li><strong>Advanced Techniques:</strong> C2 communication can be embedded in seemingly legitimate activities like website visits or social media interactions.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Defending Against C2 Communication</h2>
+        <ul>
+            <li><strong>Security Best Practices:</strong> Implement firewalls, intrusion detection systems (IDS), and network segmentation to restrict unauthorized communication.</li>
+            <li><strong>Threat Intelligence Feeds:</strong> Subscribe to feeds that provide information on malicious C2 infrastructure.</li>
+            <li><strong>Security Awareness Training:</strong> Educate employees to identify phishing attempts and suspicious network activity.</li>
+            <li><strong>Endpoint Security Software:</strong> Deploy antivirus and endpoint detection and response (EDR) solutions to monitor and block C2 attempts.</li>
+            <li><strong>Network Traffic Analysis:</strong> Monitor network traffic for anomalies that might indicate C2 communication.</li>
+            <li><strong>Restrict Remote Access:</strong> Limit remote access to critical systems and implement strong authentication protocols.</li>
+            <li><strong>Least Privilege Principle:</strong> Grant users only the access they need to perform their jobs.</li>
+            <li><strong>Patch Management:</strong> Regularly patch systems to close vulnerabilities that attackers might exploit for C2 communication.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Challenges of Mitigating C2</h2>
+        <ul>
+            <li><strong>Evolving Techniques:</strong> Attackers constantly develop new methods to bypass security controls.</li>
+            <li><strong>False Positives:</strong> Security measures can sometimes block legitimate traffic, impacting productivity.</li>
+            <li><strong>Resource Constraints:</strong> Organizations may lack the resources or expertise to implement comprehensive C2 defense strategies.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Recommendations</h2>
+        <ul>
+            <li>Conduct regular security assessments to identify vulnerabilities that could be exploited for C2 communication.</li>
+            <li>Develop an incident response plan to address C2 attacks effectively.</li>
+            <li>Stay informed about the latest C2 threats and update your security measures accordingly.</li>
+            <li>Consider implementing deception technologies to mislead attackers and disrupt their C2 efforts.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Demonstration of Command and Control</h2>
+        <div class="demonstration">
+            <h3>How C2 Works</h3>
+            <button id="startDemo">Start C2 Demonstration</button>
+            <div id="c2Demo" class="demo-content"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>How a SOC Analyst Deals with C2 Threats</h2>
+        <p>Once an alert indicating potential C2 activity is triggered, a Security Operations Center (SOC) analyst follows these steps:</p>
+        <button id="startSocDemo">Start SOC Response Demonstration</button>
+        <div id="socDemo" class="demo-content"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
