@@ -1,0 +1,15 @@
+title: Cyber Threat Intelligence 101
+description: >
+  This website is your one-stop shop for learning the fundamentals of Cyber Threat Intelligence (CTI).
+theme: minima
+
+# Optional settings
+baseurl: Cyber-Threat-Intelligence
+url: https://mohammedjangeer2023.github.io/Cyber-Threat-Intelligence/
+
+# Social settings
+github_username:  https://github.com/MohammedJangeer2023
+linkedin_username:  https://www.linkedin.com/in/mohammedjangeer/
+
+# Build settings
+markdown: kramdown
